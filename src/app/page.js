@@ -5,12 +5,12 @@ import Typewriter from "typewriter-effect";
 import github from "./document/icons8-github.svg";
 import linkedIN from "./document/icons8-linkedin.svg";
 import About from "./about";
-
 import { useState, useRef } from "react";
 import Logo from "./document/logo.jpg";
 import FirstImage from "./document/images.svg";
 // import ScrollToTop from "react-scroll-to-top";
 
+import { saveAs } from "file-saver";
 export default function Home() {
   const [hide, show] = useState("hidden");
   const update = () => {
@@ -21,22 +21,30 @@ export default function Home() {
     }
   };
 
-  const aboutSection = useRef(null);
-  const servcesSection = useRef(null);
-  // const contactSection = useRef(null);
-
   const scrollDown = (ref) => {
-		window.scrollTo({
-			top: ref.current.offsetTop,
-			behavior: 'smooth',
-		});
-	};
-
+    window.scrollTo({
+      top: ref.current.offsetTop,
+      behavior: "smooth",
+    });
+  };
+  const donwload = () => {
+    fetch("Resume .pdf").then(response => {
+      response.blob().then(blob => {
+          // Creating new object of PDF file
+          const fileURL = window.URL.createObjectURL(blob);
+          // Setting various property values
+          let alink = document.createElement('a');
+          alink.href = fileURL;
+          alink.download = 'Resume.pdf';
+          alink.click();
+      })
+  })
+  };
   return (
     <>
       <header className="text-black sticky top-0 inset-x-0  shadow-md flex  flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-blue-900 backdrop-blur-sm bg-white/30  shadow-black-xl text-sm py-3 sm:py-0">
         <nav
-          className=" text-black relative max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8"
+          className="  text-black relative max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8"
           aria-label="Global"
         >
           <div className="flex items-center justify-between">
@@ -86,7 +94,7 @@ export default function Home() {
           >
             <div className="flex flex-col gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:pl-7">
               <button
-                onClick={() => scrollDown(aboutSection)}
+               
                 className="font-medium hover:text-gray-400 sm:py-6 dark:text-black dark:hover:text-gray-500"
               >
                 {/* <a> About</a> */}
@@ -138,6 +146,7 @@ export default function Home() {
 
               <button
                 type="button"
+                onClick={donwload}
                 className="   bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 my-4 py-2 px-4 shadow-lg border rounded-md"
               >
                 Download CV
@@ -173,53 +182,33 @@ export default function Home() {
       </div>
       <hr />
 
-      <About return props={"aboutSection"}  ref={aboutSection}/>
+      <About />
       {/* <!-- component --> */}
       <footer className="relative flex flex-col items-center bg-cyan-900 overflow-hidden py-20">
         <div className="relative z-[1] container m-auto px-6 md:px-12">
           <div className="m-auto md:w-10/12 lg:w-8/12 xl:w-6/12">
             <div className="w-full max-w-screen-xl mx-auto p-4 ">
-              <div className="sm:flex sm:items-center sm:justify-between">
-                <div className="flex items-center mb-4 sm:mb-0">
+              <div className="sm:flex md:items-center ">
+                <div className="flex  mb-4 sm:mb-0 md:items-center">
                   <Image
                     src={Logo}
-                    className=" h-20  w-28  top-0 my-0 mx-0 "
+                    className=" h-20  w-28 md:mx-20"
                     alt="Logo"
                   />
-                  <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
+                  <span className="self-center md:text-2xl text-sx md:items-center font-semibold whitespace-nowrap text-white">
                     Kuldeep Singh Rajpoot
                   </span>
                 </div>
-                <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-white sm:mb-0 dark:text-white">
-                  <li>
-                    <a href="#" className="mr-4 hover:underline md:mr-6 ">
-                      About
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="mr-4 hover:underline md:mr-6">
-                      Privacy Policy
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="mr-4 hover:underline md:mr-6 ">
-                      Licensing
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:underline">
-                      Contact
-                    </a>
-                  </li>
-                </ul>
+              
               </div>
-              <hr className=" border-gray-200 sm:mx-auto dark:border-gray-700 lg:py-8" />
-              <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
+              <hr className=" border-gray-200  sm:mx-auto dark:border-gray-700 lg:py-8" />
+              <span className="block text-sm t text-center text-gray-500 sm:text-center dark:text-gray-400">
                 © 2023{" "}
-                <a href="https://flowbite.com/" className="hover:underline">
-                  Kuldeep Singh Rajpoot
+                <a href="https://portapp.vercel.app/" className="hover:underline break-normal ">
+                  Kuldeep Singh Rajpoot.
                 </a>
-                . All Rights Reserved.
+                <div className="break-normal "> All Rights Reserved.</div>
+                
               </span>
             </div>
           </div>

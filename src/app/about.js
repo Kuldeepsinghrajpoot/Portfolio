@@ -1,5 +1,7 @@
 import React from "react";
 import mits from "./document/mits-logo.png";
+import RGPV from "./document/logo.png";
+
 import Image from "next/image";
 import pic from "./document/IMG20230310152701.png";
 import left from "./document/m64udmyhucj2zb42uvyf_06640ff501.svg";
@@ -8,12 +10,12 @@ import design from "./document/bkzxjg9fxeaiuej76vdd_9e7b388222.png";
 import Skills from "./skills";
 import Project from "./project";
 
-function about(props) {
+function about() {
   return (
     <div>
       <div className=" ">
         <h1 className="text-6xl  bg-blue-900 text-center text-white  py-10 h-36 shadow-lg">
-          <strong className=" top " > About </strong>
+          <strong className=" top "> About </strong>
 
           <div className="flex justify-between">
             <div className="relative ...">
@@ -62,7 +64,6 @@ function about(props) {
           <div className=" bg-gradient-to-r from-blue-500 to-red-500 w-full h-4 box-content"></div>
         </div>
 
-
         <br />
         <h1 className="text-6xl bg-blue-900 text-center text-white py-10 h-36 shadow-lg">
           <strong>Education</strong>
@@ -88,14 +89,14 @@ function about(props) {
         <div className="md:flex justify-between rounded  md:mx-80">
           <div className="  max-w-xl rounded mx-auto flex between bg-white shadow-lg overflow-hidden md:w-96">
             <div className="bg-white">
-              <div className="md:shrink-0 flex justify-start ">
+              <div className="md:shrink-1 flex justify-start ">
                 <Image
-                  className="h-54 mx-24 w-52 object-cover md:h-54 md:w-52 object-center"
-                  src={mits}
+                  className="h-32 mx-32 my-8 w-32 object-cover md:h-40 md:w-40 "
+                  src={RGPV}
                   alt="Modern building architecture"
                 />
               </div>
-              <div className=" p-8">
+              <div className=" p-3">
                 <div className="uppercase tracking-wide text-lg text-indigo-500 font-semibold text-center">
                   Diploma
                 </div>
@@ -103,11 +104,11 @@ function about(props) {
                 <div className="mt-2 text-slate-500">
                   {" "}
                   <div>
-                    Govt. Polytechnic College Nowgong, Nowgong Chhatrpur MP, At
+                    Govt. Polytechnic College Nowgong, Nowgong Chhatrpur MP, <br /> University
                     RGPV Bhopal{" "}
                   </div>
                   <div>Computer Science & Engineering </div>
-                  <div>July 2018 - June 2021</div>
+                  <div>August 2018 - July 2021</div>
                   <div>CGPA - 8.46</div>
                 </div>
               </div>
@@ -120,12 +121,12 @@ function about(props) {
             <div className="bg-white object-center hover:object-top">
               <div className="md:shrink-0">
                 <Image
-                  className="h-54 mx-24 w-52 object-cover md:h-54 md:w-52 object-center"
+                  className="h-52  mx-12 md:mx-12  w-52 object-cover md:h-52 md:w-64"
                   src={mits}
                   alt="Modern building architecture"
                 />
               </div>
-              <div className=" p-6">
+              <div className=" p-8">
                 <div className="uppercase tracking-wide text-lg text-indigo-500 font-semibold text-center">
                   Bechlor of technolgy
                 </div>
@@ -137,7 +138,7 @@ function about(props) {
                     Madhav institute of technolgy and science,Gwalior MP
                   </div>
                   <div>Computer Science & Engineering</div>
-                  <div>August 2021 - Current</div>
+                  <div>October 2021 - Current(June 2024)</div>
                   <div>CGPA - 7.3</div>
                 </h1>
               </div>
