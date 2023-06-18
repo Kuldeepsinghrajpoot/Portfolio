@@ -25,7 +25,7 @@ function skills() {
       {/* java programming lanugage */}
       {/* <Slider dots className="rounded-xl w-full " autoplay> */}
       <div className="w-60 mx-auto rounded bg-white shadow-lg overflow-hidden">
-        <div className="md:flex">
+        <div className="">
           <div className="p-8">
             <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
               Programming in C/C++
@@ -33,7 +33,7 @@ function skills() {
             </div>
             Intermediate
             <div className="mt-2 text-slate-500">
-              <Rating></Rating>
+              
             </div>
           </div>
         </div>
@@ -57,7 +57,7 @@ function skills() {
             </div>
             Intermediate
             <div className="mt-2 text-slate-500">
-              <Rating></Rating>
+              
             </div>
           </div>
         </div>
@@ -75,7 +75,7 @@ function skills() {
             </div>
             Intermediate
             <div className="mt-2 text-slate-500">
-              <Rating></Rating>
+              
             </div>
           </div>
         </div>
@@ -96,7 +96,7 @@ function skills() {
             </div>
             Intermediate
             <div className="mt-2 text-slate-500">
-              <Rating></Rating>
+              
             </div>
           </div>
         </div>
@@ -118,7 +118,7 @@ function skills() {
             </div>
             Intermediate
             <div className="mt-2 text-slate-500">
-              <Rating></Rating>
+              
             </div>
           </div>
         </div>
@@ -147,7 +147,7 @@ function skills() {
             </div>
             Intermediate
             <div className="mt-2 text-slate-500">
-              <Rating></Rating>
+              
             </div>
           </div>
         </div>
@@ -163,7 +163,7 @@ function skills() {
             </div>
             Begining
             <div className="mt-2 text-slate-500">
-              <Rating></Rating>
+              
             </div>
           </div>
         </div>
@@ -184,7 +184,7 @@ function skills() {
             </div>
             Begining
             <div className="mt-2 text-slate-500">
-              <Rating></Rating>
+              
             </div>
           </div>
         </div>

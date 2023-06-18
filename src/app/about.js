@@ -86,12 +86,12 @@ function about() {
         </h1>
         <br />
         {/* eduction information */}
-        <div className="md:flex justify-between rounded  md:mx-80">
-          <div className="  max-w-xl rounded mx-auto flex between bg-white shadow-lg overflow-hidden md:w-96">
-            <div className="bg-white">
-              <div className="md:shrink-1 flex justify-start ">
+        <div className=" grid   sm:grid-cols-2 gap-5    xl:mx-60 2xl:mx-96">
+        <div className="w-80  mx-auto rounded bg-white  shadow-md overflow-hidden md:max-w-2xl">
+            <div className="bg-white object-center hover:object-top">
+              <div className="md:shrink-0">
                 <Image
-                  className="h-32 mx-32 my-8 w-32 object-cover md:h-40 md:w-40 "
+                  className="h-32 mx-24 md:mx-24 my-8 w-32 object-cover md:h-40 md:w-40 "
                   src={RGPV}
                   alt="Modern building architecture"
                 />
@@ -116,12 +116,12 @@ function about() {
             </div>
           </div>
 
-          <br />
-          <div className=" rounded max-w-xl mx-auto flex justify-center bg-white  shadow-lg overflow-hidden md:w-96">
+         
+          <div className="w-80  mx-auto rounded bg-white  shadow-md overflow-hidden md:max-w-2xl">
             <div className="bg-white object-center hover:object-top">
               <div className="md:shrink-0">
                 <Image
-                  className="h-52  mx-12 md:mx-12  w-52 object-cover md:h-52 md:w-64"
+                  className="h-52  mx-7 md:mx-3  w-64 object-cover md:h-52 md:w-64"
                   src={mits}
                   alt="Modern building architecture"
                 />
@@ -170,7 +170,7 @@ function about() {
         </div>
       </h1>
       <br />
-      <div className="grid md:grid-cols-4 grid-cols-1  gap-5  md:mx-56 ">
+      <div className="grid   sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 xl:grid-cols-4    gap-5  xl:mx-20 2xl:mx-56  ">
         <Skills />
         {/* <div className=" bg-gradient-to-r from-blue-500 to-red-500 w-full h-4 box-content"></div> */}
       </div>

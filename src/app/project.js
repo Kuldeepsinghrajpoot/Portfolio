@@ -50,7 +50,7 @@ import cal2 from "./document/cal2.png";
 
 function App() {
   return (
-    <div className=" md:mx-36 rounded grid  md:grid-cols-2 grid-cols-1  gap-3  w-fit">
+    <div className=" md:mx-36 rounded grid  xl:grid-cols-2 grid-cols-1  gap-3  w-fit">
       <div className=" mx-12 my-11 rounded bg-white">
         <div className="max-w-lg rounded overflow-hidden shadow-lg  h-full">
           <div className="autoPlay">
